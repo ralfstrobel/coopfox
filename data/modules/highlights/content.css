@@ -1,0 +1,153 @@
+/**
+ * This file is part of the Firefox extension "CoopFox", developed as part of my master's thesis
+ * at the Cooperative Media Lab, University of Bamberg, Germany.
+ * @copyright (c) 2014 Ralf Strobel
+ *
+ * All content is no longer maintained and is made available purely for archival and educational purposes.
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+.coopfox-highlight {
+    position: relative !important;
+    z-index: 9995 !important;
+    display: inline !important;
+    overflow: visible !important;
+    color: #000 !important;
+    margin: 0 !important;
+    padding: 0 .2em !important;
+    border: none !important;
+    border-radius: 0.4em !important;
+    -moz-user-select: -moz-none  !important;
+    cursor: pointer  !important;
+}
+
+.coopfox-highlight-transient {
+    border-radius: 0 !important;
+    padding: 0 !important;
+    cursor: inherit !important;
+}
+
+.coopfox-highlight * {
+    color: #000 !important;
+}
+.coopfox-highlight a {
+    color: #444 !important;
+}
+
+.coopfox-highlight-close {
+    position: absolute !important;
+    z-index: 9995 !important;
+    top: -10px !important;
+    right: -10px !important;
+    display: none !important;
+    cursor: pointer !important;
+    background-color: #000 !important;
+    margin: 0 !important;
+    border: 1px solid #fff !important;
+    border-radius: 0.6em !important;
+    font: normal normal normal 13px/15px arial,sans-serif !important;
+    text-decoration: none !important;
+}
+
+.coopfox-highlight-close:before {
+    content: "x";
+    color: #fff !important;
+    padding: 2px 5px !important;
+}
+
+.coopfox-highlight-radar {
+    display: block !important;
+    position: fixed !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    /*border: 1px solid #fff !important; */
+    border-radius: 3px !important;
+    font: normal normal normal 16px/16px arial,sans-serif !important;
+    background: transparent none !important;
+    text-decoration: none !important;
+    -moz-user-select: -moz-none  !important;
+}
+.coopfox-highlight-radar:before {
+    content: "\2710";
+    font-weight: bold !important;
+}
+
+.coopfox-highlight-radar-transient:before {
+    content: "\25c8";
+    animation-duration: 0.4s;
+    animation-name: coopfox-highlight-radar-transient-blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes coopfox-highlight-radar-transient-blink {
+    0% { opacity: 1; }
+    30% { opacity: 1; }
+    70% { opacity: 0.2; }
+    100% { opacity: 0.2; }
+}
+
+.coopfox-highlight-annotations {
+    position: absolute !important;
+    z-index: 9995 !important;
+    display: none !important;
+    border: 1px solid #aaa !important;
+    border-radius: 3px !important;
+    background-color: #fff !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -moz-user-select: -moz-none !important;
+}
+
+.coopfox-highlight-annotations:empty {
+    border: none !important;
+}
+
+.coopfox-highlight-annotations * {
+    position: static !important;
+    display: inline !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    font: normal normal normal 8pt/11pt "Lucida Grande",Verdana,sans-serif !important;
+    text-decoration: none !important;
+    text-align: left !important;
+    color: #000 !important;
+    background-color: transparent !important;
+    max-width: 400px !important;
+    min-width: 100px !important;
+}
+
+.coopfox-highlight-annotations > * {
+    display: block !important;
+    padding: 3px 8px !important;
+}
+
+.coopfox-highlight-annotations > *:nth-child(even) {
+    background-color: #f8f8f8 !important;
+}
+
+.coopfox-highlight-annotations span:first-child {
+    margin-right: 10px !important;
+    font-weight: bold !important;
+}
+
+.coopfox-highlight-annotations-indicator {
+    position: absolute !important;
+    display: block !important;
+    left: -6px !important;
+    bottom: -6px !important;
+    font: normal normal normal 9px/9px arial,sans-serif !important;
+    text-decoration: none !important;
+    background: transparent none !important;
+}
+.coopfox-highlight-annotations-indicator:before {
+    content: "\270e";
+}

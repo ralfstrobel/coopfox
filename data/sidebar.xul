@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+This file is part of the Firefox extension "CoopFox", developed as part of my master's thesis
+at the Cooperative Media Lab, University of Bamberg, Germany.
+@copyright (c) 2014 Ralf Strobel
+
+All content is no longer maintained and is made available purely for archival and educational purposes.
+
+This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this
+file, You can obtain one at https://mozilla.org/MPL/2.0/.
+-->
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <splitter id="coopfox-sidebar-splitter" />
+    <vbox id="coopfox" width="350">
+        <popupset id="coopfoxPopupSet">
+            <menupopup id="coopfoxRosterContextMenu">
+            </menupopup>
+            <menupopup id="coopfoxRosterMenu">
+            </menupopup>
+            <menupopup id="coopfoxPanelContextMenu">
+            </menupopup>
+            <menupopup id="coopfoxPanelMenu">
+            </menupopup>
+        </popupset>
+        <sidebarheader align="center">
+            <label flex="1" crop="end">CoopFox</label>
+            <toolbarbutton id="button-coopfox-close" class="tabs-closebutton" tooltiptext="Close sidebar" />
+        </sidebarheader>
+        <iframe id="coopfox-roster" type="content" height="200" autoscroll="false" contextmenu="coopfoxRosterContextMenu" tooltip="aHTMLTooltip" />
+        <splitter id="coopfox-panel-splitter" />
+        <iframe id="coopfox-panel" type="content" flex="1" autoscroll="false" contextmenu="coopfoxPanelContextMenu" tooltip="aHTMLTooltip" />
+    </vbox>
+</overlay>

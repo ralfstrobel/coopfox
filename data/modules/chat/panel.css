@@ -1,0 +1,192 @@
+/**
+ * This file is part of the Firefox extension "CoopFox", developed as part of my master's thesis
+ * at the Cooperative Media Lab, University of Bamberg, Germany.
+ * @copyright (c) 2014 Ralf Strobel
+ *
+ * All content is no longer maintained and is made available purely for archival and educational purposes.
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+.chat-history-wrapper {
+    position: relative;
+    -moz-box-flex: 1;
+}
+
+.chat-history-scroller {
+    max-height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+    bottom: 0;
+}
+
+.chat-history .no-messages {
+    color: #aaa;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.chat-unseen-above, .chat-unseen-below {
+    position: absolute;
+    right: 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+.chat-unseen-above {
+    top: -2px;
+    cursor: pointer;
+}
+.chat-unseen-above:before {
+    content: "▲";
+}
+.chat-unseen-below {
+    bottom: -2px;
+    cursor: pointer;
+}
+.chat-unseen-below:before {
+    content: "▼";
+}
+
+.chat-history .message > .sender.unseen,
+.chat-history .message-body.unseen,
+.chat-history .status .contact-color.unseen,
+.chat-history .time.unseen,
+.chat-history a.unseen {
+    color: red;
+}
+
+.chat-history, .chat-history-subthread {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.chat-history-subthread {
+    margin-top: 5px;
+}
+
+.chat-history li {
+    padding: 3px 8px;
+    line-height: 12pt;
+    -moz-user-select: text;
+    cursor: auto;
+    position: relative;
+}
+.chat-history li:nth-child(even),
+.chat-history li:nth-child(odd) li:nth-child(odd) {
+    background-color: #f8f8f8;
+}
+.chat-history li:nth-child(odd),
+.chat-history li:nth-child(odd) li:nth-child(even) {
+    background-color: #fff;
+}
+
+.chat-history-subthread li {
+    padding-right: 0;
+}
+
+.chat-history .meta {
+    float: right;
+    cursor: default;
+    font-size: 6.5pt;
+    line-height: 11pt;
+    overflow: visible;
+    white-space: nowrap;
+    width: 30px;
+}
+
+.chat-history .time {
+    color: #bbb;
+    font-size: 5.5pt;
+}
+
+.chat-history .time:only-child {
+    font-size: inherit;
+}
+
+.chat-history .sender {
+    font-weight: bold;
+    float:left;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.chat-history-wrapper .user-selection {
+    margin-right: 3px;
+}
+.chat-history-wrapper .user-selection:before {
+    content: "◆";
+}
+.chat-history-wrapper .user-selection.radar {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    font-size: 10px;
+    height: 10px;
+    line-height: 0;
+}
+
+.chat-history .status {
+    color: #aaa;
+    font-style: italic;
+}
+
+.chat-history .status.join {
+    font-style: normal;
+}
+.chat-history .status.join.rejected .message-body {
+    text-decoration: line-through;
+}
+.chat-history .status.join.rejected .message-body:after {
+    content: " (Rejected)";
+}
+
+.chat-states div {
+    display: none;
+    padding: 4px 8px;
+    color: #aaa;
+}
+.chat-states div.composing, .chat-states div.paused {
+    display: list-item;
+}
+.chat-states div.composing:after {
+    content: " is typing...";
+}
+.chat-states div.paused:after {
+    content: " has entered text.";
+}
+
+.chat-input {
+    -moz-box-flex: 0;
+    background-color: #ddd;
+    border-top: 1px solid #aaa;
+    padding: 6px 4px;
+}
+
+.chat-history li .chat-input {
+    background-color: #EEEEEE;
+    border: 0 none;
+    padding: 2px 2px 2px 3px;
+}
+
+.chat-input form {
+    width: 100%;
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+}
+
+.chat-input-text {
+    -moz-box-flex: 1;
+    font-size: 9pt;
+}
+
+.chat-input input[type="button"] {
+    -moz-box-flex: 0;
+    margin-left: 2px;
+    padding: 0;
+    font-size: 8pt;
+}

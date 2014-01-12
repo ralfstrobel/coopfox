@@ -1,0 +1,75 @@
+/**
+ * This file is part of the Firefox extension "CoopFox", developed as part of my master's thesis
+ * at the Cooperative Media Lab, University of Bamberg, Germany.
+ * @copyright (c) 2014 Ralf Strobel
+ *
+ * All content is no longer maintained and is made available purely for archival and educational purposes.
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+.coopchat li {
+    padding-left: 13px !important;
+}
+
+.coopchat .location {
+    cursor: default;
+}
+
+.coopchat .location img {
+    display: block;
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    top: 6px;
+    left: 1px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    line-height: 8px;
+    font-size: 7.5px;
+    text-align: center;
+    vertical-align: middle;
+    color: #666;
+}
+
+.coopchat .location.samepage img {
+    border-color: #22BE00;
+}
+
+.coopchat .location:not(.knownpage) img {
+    filter: url("filters.svg#greyscale");
+    opacity: 0.5;
+}
+
+.coopchat .knownpage a, .chat-history-wrapper .samepage-radar {
+    color: #22BE00;
+}
+
+.chat-history-wrapper .samepage-radar {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    font-size: 6px;
+    height: 6px;
+    line-height: 6px;
+}
+.chat-history-wrapper .samepage-radar:before {
+    content: "■";
+}
+
+.coopchat .location .hovershow {
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    border-radius: 5px 5px 5px 5px;
+    padding: 2px 3px;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+}
+
+.coopchat .location .contact-seen {
+    margin-left: 2px;
+    font-weight: bold;
+}

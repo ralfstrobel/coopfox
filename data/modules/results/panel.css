@@ -1,0 +1,56 @@
+/**
+ * This file is part of the Firefox extension "CoopFox", developed as part of my master's thesis
+ * at the Cooperative Media Lab, University of Bamberg, Germany.
+ * @copyright (c) 2014 Ralf Strobel
+ *
+ * All content is no longer maintained and is made available purely for archival and educational purposes.
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+#results-tab .chat-history-scroller {
+    bottom: auto;
+}
+
+#results-tab .chat-history .meta {
+    text-align: right;
+    width: 60px;
+}
+
+#results-tab .meta .time {
+    display: none;
+}
+
+#results-tab .chat-input {
+    display: none;
+}
+
+.result-prio-change {
+    font-size: inherit;
+    line-height: 1em;
+    padding: 0;
+    margin-left: 2px;
+    border: 1px solid buttonshadow;
+    border-radius: 3px;
+    color: buttontext;
+    background-color: buttonface;
+}
+
+.result-prio-change:hover {
+    background-color: #bbb;
+}
+
+.result-priority {
+    margin-right: 2px;
+    color: #21CB35;
+    cursor: pointer;
+}
+
+.result-priority:not(.negative):before {
+    content: "+";
+}
+.result-priority.negative {
+    color: #d60000;
+}

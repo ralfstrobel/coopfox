@@ -1,0 +1,111 @@
+/**
+ * This file is part of the Firefox extension "CoopFox", developed as part of my master's thesis
+ * at the Cooperative Media Lab, University of Bamberg, Germany.
+ * @copyright (c) 2014 Ralf Strobel
+ *
+ * All content is no longer maintained and is made available purely for archival and educational purposes.
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+body {
+    padding: 8px;
+    margin: 0;
+    overflow: hidden;
+    line-height: 1.5em;
+    -moz-user-select: -moz-none;
+    cursor: default;
+    font-family: "Lucida Grande",Verdana,sans-serif;
+    font-size: 8pt;
+    background-color: #fff;
+    color: #000;
+}
+
+a {
+    color: #1b32cf;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+#prologue {
+    font-size: 8.5pt;
+}
+
+#accordion {
+    margin: 15px 0;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 5px;
+}
+
+input, select {
+    display: inline-block;
+    border: 1px solid #aaa;
+    margin: 5px 0;
+    width: calc(100% - 120px);
+    font-family: "Lucida Grande",Verdana,sans-serif;
+    font-size: 9pt;
+}
+
+#xmpp-hostname {
+    margin-right: 18px;
+    width: calc(100% - 220px);
+}
+
+#xmpp-port {
+    width: 44px;
+}
+
+label.inline {
+    width: auto;
+}
+
+input.inline {
+    width: auto;
+}
+
+input[type="checkbox"] {
+    vertical-align: middle;
+}
+
+button {
+    display: inline-block;
+    border: 2px outset #444;
+    background-color: #eee;
+    font-weight: bold;
+    margin: 5px 20px 0 109px;
+    padding: 2px 10px;
+}
+
+.description {
+    margin-left: 110px;
+    margin-bottom: 2px;
+    position: relative;
+    top: -3px;
+    color: #888888;
+    font-size: 7pt;
+}
+
+.ui-accordion-header {
+    font-weight: bold;
+}
+
+.ui-accordion .ui-accordion-content {
+    overflow: hidden;
+    padding: 10px 15px;
+    position: relative;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+#epilogue {
+    color: #cc0000;
+}

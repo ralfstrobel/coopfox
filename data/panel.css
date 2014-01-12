@@ -1,0 +1,152 @@
+/**
+ * This file is part of the Firefox extension "CoopFox", developed as part of my master's thesis
+ * at the Cooperative Media Lab, University of Bamberg, Germany.
+ * @copyright (c) 2014 Ralf Strobel
+ *
+ * All content is no longer maintained and is made available purely for archival and educational purposes.
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+html {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-size: 8pt;
+    -moz-user-select: -moz-none;
+    cursor: default;
+    font-family: "Lucida Grande",Verdana,sans-serif;
+}
+
+#menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 16px;
+    height: 24px;
+    z-index: 10;
+    border: 1px solid #aaa;
+    border-top-style: none;
+    border-right-style: none;
+    background-color: #ddd;
+    text-align: center;
+    font-size: 0;
+}
+#menu:hover {
+    background-color: #bbb;
+}
+#menu:before {
+    content: "▼";
+    font-size: 10px;
+    position: relative;
+    top: -1px;
+    color: #444444;
+}
+
+#tabs {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    width: 100%;
+    height: 100%;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+}
+
+#tabs.notabs {
+    display: block;
+}
+
+#tabs .ui-tabs-panel {
+    -moz-box-flex: 1;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    padding: 5px 0 0 0 !important;
+    margin: 0 !important;
+    width: 100%;
+}
+
+#tabs-nav {
+    margin: 0 !important;
+    padding: 0 15px 0 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    -moz-box-flex: 0;
+    height: 24px;
+    font-size: 8.5pt;
+}
+
+#tabs-nav li {
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+#tabs .ui-state-disabled {
+    display: none !important;
+}
+
+#tabs-nav .tab-close {
+    display: none;
+    position: absolute;
+    right: 1px;
+    top: 4px;
+    padding: 0 3px 3px 2px;
+    border: 1px solid transparent;
+    border-radius: 3px 3px 3px 3px;
+    font-size: 8px;
+    height: 8px;
+    font-weight: bold;
+}
+#tabs-nav li:hover .tab-close {
+    display: inline-block;
+    z-index: 10;
+}
+#tabs-nav .tab-close:hover {
+    background-color: #bbb;
+    border-color: #aaa;
+}
+#tabs-nav .tab-close:before {
+    content: "✖";
+}
+
+#tabs-nav .tab-highlighted * {
+     color: red;
+}
+
+#tabs-nav .tab-highlight-count {
+    position: relative;
+    left: -5px;
+    top: 3px;
+    font-size: 7pt;
+}
+#tabs-nav .tab-highlight-count:before {
+    content: "(";
+}
+#tabs-nav .tab-highlight-count:after {
+    content: ")";
+}
+
+a, .link-color { color: #8AB1EF; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.blinking {
+    animation-duration: 0.7s;
+    animation-name: blinking;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes blinking {
+    0% { opacity: 1; }
+    40% { opacity: 1; }
+    60% { opacity: 0; }
+    100% { opacity: 0; }
+}

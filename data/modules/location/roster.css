@@ -1,0 +1,58 @@
+/**
+ * This file is part of the Firefox extension "CoopFox", developed as part of my master's thesis
+ * at the Cooperative Media Lab, University of Bamberg, Germany.
+ * @copyright (c) 2014 Ralf Strobel
+ *
+ * All content is no longer maintained and is made available purely for archival and educational purposes.
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+.roster-item {
+    margin-left: 14px !important;
+}
+
+.roster-item .samepage:before, .roster-item .knowspage:before {
+    position: absolute;
+    left: 2px;
+    font-size: 15px;
+    line-height: 13px;
+    color: #02CF00;
+}
+
+.roster-item .knowspage:before {
+    content: "◁";
+}
+
+.roster-item .samepage:before {
+    content: "◀";
+}
+
+.roster-item .location-link {
+    display: block;
+    padding-top: 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 8pt;
+}
+
+.roster-item .location-link img {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    vertical-align: middle;
+    margin-right: 2px;
+    position: relative;
+    top: -1px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    font-size: 9px;
+    line-height: 10px;
+    text-align: center;
+    color: #666;
+}
+
+/* More arrows: http://en.wikipedia.org/wiki/Geometric_Shapes */

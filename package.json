@@ -1,0 +1,48 @@
+{
+    "id": "jid1-B55lLl4Yu1Y9Fw",
+    "version": "1.0",
+    "name": "coopfox",
+    "fullName": "CoopFox",
+    "description": "Collaborative Web Browsing in Firefox (master's thesis at the Cooperative Media Lab, University of Bamberg, Germany)",
+    "author": "Ralf Strobel",
+    "license": "MPL 2.0",
+    "icon": "data/images/icon.png",
+    "icon64": "data/images/icon64.png",
+    "preferences": [
+        {
+            "name": "alwaysConnected",
+            "title": "Always Stay Connected",
+            "description": "Connect on FireFox startup and do not disconnect, even when no sidebar is active.",
+            "type": "bool",
+            "value": false
+        },
+        {
+            "name": "allWindows",
+            "title": "Enable for New Windows",
+            "description": "Show the CoopFox sidebar by default in new windows.",
+            "type": "bool",
+            "value": false
+        },
+        {
+            "name": "publishUrl",
+            "title": "Show URL to Coop Partners",
+            "description": "CoopChat parters can see the web page in your active tab by default (can be changed per session).",
+            "type": "bool",
+            "value": true
+        },
+        {
+            "name": "syncColors",
+            "title": "Synchronize Colors",
+            "description": "Determine the colors of CoopChat contacts by their join order, so that all participants see them identically. Otherwise, you will always show up red and other colors will be random.",
+            "type": "bool",
+            "value": false
+        },
+        {
+            "name": "ignoreBadCerts",
+            "title": "Ignore Invalid Server Certificates",
+            "description": "Connect to XMPP servers using encrypted communication, even if they do not provide a trusted SSL certificate. If you disable this option, you will be prompted once for each server.",
+            "type": "bool",
+            "value": true
+        }
+    ]
+}
