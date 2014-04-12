@@ -5,6 +5,8 @@ The Firefox extension in this repository was developed as part of my master's th
 
 All content is no longer maintained and is made available purely for archival and educational purposes, subject to the [Mozilla Public License 2.0](https://mozilla.org/MPL/2.0/).
 
+The included [thesis copy](doc/CoopFox_Thesis_2014_CC.pdf) is NOT subject to the MPL license, but instead made available under a [Creative Commons BY-NC-ND 4.0 International License](http://creativecommons.org/licenses/by-nc-nd/4.0/).
+
 ## Directory Overview ##
 
 * lib (backend code, privileged CommonJS with access to low level browser functionality)
